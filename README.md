@@ -1,5 +1,5 @@
 # My Little Shop
-
+This application simulate online shop from customer side. Customer can add and remove items from shopping cart and finish an order by creating an account and completes some required information about himself (name, address, city, country, phone number etc.). 
 
 ## Getting Started
 These instruction will help you to run this project on your local machine.
