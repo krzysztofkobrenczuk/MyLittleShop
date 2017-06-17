@@ -13,27 +13,25 @@ namespace MyLittleShop.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "1.1.2")
+                .HasAnnotation("ProductVersion", "1.0.1")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole", b =>
                 {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<string>("Id");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
                     b.Property<string>("Name")
-                        .HasMaxLength(256);
+                        .HasAnnotation("MaxLength", 256);
 
                     b.Property<string>("NormalizedName")
-                        .HasMaxLength(256);
+                        .HasAnnotation("MaxLength", 256);
 
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedName")
-                        .IsUnique()
                         .HasName("RoleNameIndex");
 
                     b.ToTable("AspNetRoles");
@@ -60,8 +58,7 @@ namespace MyLittleShop.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUser", b =>
                 {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<string>("Id");
 
                     b.Property<int>("AccessFailedCount");
 
@@ -69,7 +66,7 @@ namespace MyLittleShop.Migrations
                         .IsConcurrencyToken();
 
                     b.Property<string>("Email")
-                        .HasMaxLength(256);
+                        .HasAnnotation("MaxLength", 256);
 
                     b.Property<bool>("EmailConfirmed");
 
@@ -78,10 +75,10 @@ namespace MyLittleShop.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd");
 
                     b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256);
+                        .HasAnnotation("MaxLength", 256);
 
                     b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256);
+                        .HasAnnotation("MaxLength", 256);
 
                     b.Property<string>("PasswordHash");
 
@@ -94,7 +91,7 @@ namespace MyLittleShop.Migrations
                     b.Property<bool>("TwoFactorEnabled");
 
                     b.Property<string>("UserName")
-                        .HasMaxLength(256);
+                        .HasAnnotation("MaxLength", 256);
 
                     b.HasKey("Id");
 
@@ -154,6 +151,8 @@ namespace MyLittleShop.Migrations
                     b.HasKey("UserId", "RoleId");
 
                     b.HasIndex("RoleId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("AspNetUserRoles");
                 });
@@ -224,29 +223,29 @@ namespace MyLittleShop.Migrations
 
                     b.Property<string>("AddressLine1")
                         .IsRequired()
-                        .HasMaxLength(100);
+                        .HasAnnotation("MaxLength", 100);
 
                     b.Property<string>("AddressLine2");
 
                     b.Property<string>("City")
                         .IsRequired()
-                        .HasMaxLength(50);
+                        .HasAnnotation("MaxLength", 50);
 
                     b.Property<string>("Country")
                         .IsRequired()
-                        .HasMaxLength(50);
+                        .HasAnnotation("MaxLength", 50);
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(50);
+                        .HasAnnotation("MaxLength", 50);
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasMaxLength(50);
+                        .HasAnnotation("MaxLength", 50);
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasMaxLength(50);
+                        .HasAnnotation("MaxLength", 50);
 
                     b.Property<DateTime>("OrderPlaced");
 
@@ -254,14 +253,14 @@ namespace MyLittleShop.Migrations
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasMaxLength(25);
+                        .HasAnnotation("MaxLength", 25);
 
                     b.Property<string>("State")
-                        .HasMaxLength(10);
+                        .HasAnnotation("MaxLength", 10);
 
                     b.Property<string>("ZipCode")
                         .IsRequired()
-                        .HasMaxLength(10);
+                        .HasAnnotation("MaxLength", 10);
 
                     b.HasKey("OrderId");
 

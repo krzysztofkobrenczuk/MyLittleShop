@@ -8,8 +8,8 @@ using MyLittleShop.Models;
 namespace MyLittleShop.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20170403121938_initialdb")]
-    partial class initialdb
+    [Migration("20170617160604_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
