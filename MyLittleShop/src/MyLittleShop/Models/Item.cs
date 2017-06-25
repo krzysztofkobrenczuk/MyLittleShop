@@ -17,7 +17,6 @@ namespace MyLittleShop.Models
         public bool IsItemOfTheWeek { get; set; }
         public bool InStock { get; set; }
         public int CategoryId { get; set; }
-
         public virtual Category Category { get; set; }
 
     }

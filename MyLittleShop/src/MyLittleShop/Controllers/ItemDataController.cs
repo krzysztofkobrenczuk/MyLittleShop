@@ -26,7 +26,7 @@ namespace MyLittleShop.Controllers
         {
             IEnumerable<Item> dbItems = null;
 
-            dbItems = _itemRepository.Items.OrderBy(p => p.ItemId).Take(10);
+            dbItems = _itemRepository.Items.OrderBy(p => p.ItemId).Take(6);
 
             List<ItemViewModel> items = new List<ItemViewModel>();
 

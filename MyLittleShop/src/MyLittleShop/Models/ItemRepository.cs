@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyLittleShop.Models
 {
-    public class ItemRepository: IItemRepository
+    public class ItemRepository : IItemRepository
     {
         private readonly AppDbContext _appDbContext;
 
