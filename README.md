@@ -13,3 +13,7 @@ In Visual Studio open Package Manager Console then write
 * Add-Migration Initial
 * Update-Database
 ```
+
+### Images
+![IndexPage](http://i.imgur.com/tmVzR02.png)
+![ShoppingCart](http://i.imgur.com/A9ejuOK.png)
